@@ -47,7 +47,6 @@ p {
   font-family: var(--ff-primary);
   font-style: normal;
   font-weight: 700;
-  padding-top: 1rem;
 }
 
 h1,
@@ -126,4 +125,6 @@ img {
     margin: 0;
     font-size: 3rem;
   }
+
+  .header h1 { padding-top: 1rem; }
 }
