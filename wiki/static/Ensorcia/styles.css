@@ -23,7 +23,6 @@ body {
   background-color: var(--clr-primary-200);
   font-family: var(--ff-primary);
   font-weight: 400;
-  font-size: 1.3125rem;
   line-height: 1.6;
   height: 100%;
   overflow: hidden;
@@ -47,6 +46,7 @@ p {
   font-family: var(--ff-primary);
   font-style: normal;
   font-weight: 700;
+  border-bottom: none;
 }
 
 h1,
@@ -57,12 +57,14 @@ h3 {
   line-height: 1;
   font-weight: 400;
   font-style: italic;
+  border-bottom: 1px solid #BAB5B2;
 }
 
+h1,
 h2,
 h3,
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 p { color: #123C69; }
@@ -86,8 +88,9 @@ img {
 
 .content {
   display: flex;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   flex-direction: column;
+  width: 100%;
 }
 
 .title {
@@ -102,6 +105,11 @@ img {
   align-items: center;
 }
 .hud a { color: var(--clr-primary-200); }
+
+h1 {
+  font-size: 2rem;
+  line-height: normal;
+}
 
 @media (min-width: 40em) {
   .container {
