@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins/Poppins-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --clr-primary-200: #EEE2DC;
+  --clr-primary-400: #AC3B61;
+  
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #123C69;
+
+  
+  --ff-primary: "Poppins", sans-serif;
+  --ff-accent: "Playfair Display", serif;
+}
+  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-primary-200);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; }
+ 
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.header h1,
+.header h2,
+.header h3 { color: var(--clr-primary-200); }
+
+.header h1 {
+  font-family: var(--ff-primary);
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-accent);
+  line-height: 1;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.header {
+  display: flex;
+  background-color: var(--clr-neutral-900);
+  vertical-align: middle;
+  padding: 0.25rem 1rem 0.25rem 0.5rem;
+}
+
+.content {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+}
+
+.title {
+  display: inline-flex;
+  margin-right: 1rem;
+  font-family: var(--ff-primary) !important;
+  align-self: center;
+}
+
+.hud {
+  display: inline-flex;
+  align-items: center;
+}
+.hud a { color: var(--clr-primary-200); }
+
+@media (min-width: 40em) {
+  .container {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    position: static;
+    align-items: center;
+  }
+
+  .content {
+    position: relative;
+  }
+  .title {
+    margin: 0;
+    font-size: 3rem;
+  }
+}

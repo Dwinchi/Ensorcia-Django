@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'Ensorcia/styles.css' %}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Encyclopedia for the Ensorcia role play discord community">
+    </head>
+    <body>
+        <section class="container">
+            <section class="header">
+                <h1 class="title">Ensorcia</h1>
+                <div class="hud">
+                    <a href="{% url 'index' %}">Home</a>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </section>
+            <section class="content">
+                {% block body %}
+                {% endblock %}
+            </section>
+        </section>
+    </body>
+</html>
