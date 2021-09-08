@@ -8,6 +8,8 @@
   --clr-neutral-100: #fff;
   --clr-neutral-900: #123C69;
 
+  --clr-theme-1: #a6e2eb;
+
   
   --ff-primary: "Lato", sans-serif;
   --ff-accent: "Montserrat", serif;
@@ -22,7 +24,8 @@
 body {
   background-color: var(--clr-primary-200);
   font-family: var(--ff-primary);
-  font-weight: 400;
+  font-size: 1.3125rem;
+  font-weight: 300;
   line-height: 1.6;
   height: 100%;
   overflow: hidden;
@@ -34,7 +37,8 @@ body,
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin: 0;
 }
 
@@ -60,10 +64,10 @@ h3 {
   border-bottom: 1px solid #BAB5B2;
 }
 
-h1,
 h2,
 h3,
-p {
+p, 
+ul {
   margin-bottom: 1rem;
 }
 
@@ -111,6 +115,29 @@ h1 {
   line-height: normal;
 }
 
+.button {
+  display: block;
+  position: relative;
+}
+
+.text {
+  z-index: 10;
+  position: relative;
+  transition: color 0.15s;
+  color: var(--clr-primary-200);
+}
+
+.fill {
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  transition: height 0.15s;
+  display: block;
+  position: absolute;
+  background-color: var(--clr-theme-1);
+}
+
 @media (min-width: 40em) {
   .container {
     display: flex;
@@ -134,5 +161,16 @@ h1 {
     font-size: 3rem;
   }
 
-  .header h1 { padding-top: 1rem; }
+  .header h1 {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .button { padding: 0 1rem; }
+  .button:hover .fill { height: 100% }
+  .button:hover .text { color: var(--clr-neutral-900); }
+  .text {
+    font-size: 2rem;
+    font-weight: 700;
+  }
 }

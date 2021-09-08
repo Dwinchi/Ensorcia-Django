@@ -15,7 +15,10 @@
             <section class="header">
                 <h1 class="title">Ensorcia</h1>
                 <div class="hud">
-                    <a href="{% url 'index' %}">Home</a>
+                    <a class="button" href="{% url 'index' %}">
+                        <span class="fill"></span>
+                        <span class="text">Home</span>
+                    </a>
                 </div>
                 {% block nav %}
                 {% endblock %}
