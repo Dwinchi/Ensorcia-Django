@@ -161,10 +161,8 @@ h1 {
     font-size: 3rem;
   }
 
-  .header h1 {
-    padding-top: 1rem;
-    margin-bottom: 1rem;
-  }
+  .header h1 { padding-top: 1rem; }
+  h1 { margin-bottom: 1rem; }
 
   .button { padding: 0 1rem; }
   .button:hover .fill { height: 100% }
