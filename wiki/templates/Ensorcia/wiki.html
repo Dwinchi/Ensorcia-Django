@@ -1,0 +1,11 @@
+{% extends "Ensorcia/template.html" %}
+
+{% block title %}
+    {{ mytitle }}
+{% endblock %}
+
+{% block body %}
+    {% autoescape off %}
+    {{ mytext }}
+    {% endautoescape %}
+{% endblock %}
